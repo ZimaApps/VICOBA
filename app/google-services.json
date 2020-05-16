@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "866303963083",
+    "firebase_url": "https://vicoba-345df.firebaseio.com",
+    "project_id": "vicoba-345df",
+    "storage_bucket": "vicoba-345df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866303963083:android:1bd180530c873c3eff904e",
+        "android_client_info": {
+          "package_name": "com.zimaapps.vicoba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866303963083-kp6qb1u2eegtqo3kk2ljf0qdgu4o03b1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zimaapps.vicoba",
+            "certificate_hash": "ac4764b940e3104b83c482fa1ebdf8fdbc629f55"
+          }
+        },
+        {
+          "client_id": "866303963083-pjjgqhqponfp0d03fb3lpk6ljj7nmq0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6uuKvsetslaneNMjzlYYFDAFWdNv1ZP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866303963083-pjjgqhqponfp0d03fb3lpk6ljj7nmq0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

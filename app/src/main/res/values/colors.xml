@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8CBBF1</color>
+    <color name="lightColorPrimary">#ffffff</color>
+    <color name="darkColorPrimary">#347B77</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="colorAccent">#FDFDFF</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="lightgrey">#EDEDED</color>
+    <color name="black">#000000</color>
+
+    <color name="common_border_color">#ffffff</color>
+    <color name="round_green">#0aea07</color>
+
+    <color name="primaryColor">#546e7a</color>
+    <color name="primaryLightColor">#819ca9</color>
+    <color name="primaryDarkColor">#29434e</color>
+    <color name="primaryTextColor">#ffffff</color>
+
+    // chat item
+    <color name="chat_time_color">#0aea07</color>
+    <color name="chat_view_separator">#2faaaaaa</color>
+
+
+    <color name="white">#ffffff</color>
+</resources>

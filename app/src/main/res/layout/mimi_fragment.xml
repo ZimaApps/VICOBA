@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/chatRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userIV"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/colorPrimary"
+                android:src="@drawable/pic" />
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/userIV"
+                android:text="Vihaan"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/messageTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTV"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/userIV"
+                android:text="hello" />
+
+            <TextView
+                android:id="@+id/messageTVx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/messageTV"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/userIV"
+                android:text="hello" />
+
+            <ImageView
+                android:id="@+id/lastMessageTimeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:onClick="showDialog"
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_edit_black_24dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/chat_view_separator"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/chg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/nameTVwww"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Hisa"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/messageTVwww"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nameTVwww"
+                        android:layout_marginLeft="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/messageTVxwww"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/messageTVwww"
+                        android:layout_marginLeft="10dp"
+                        android:text="" />
+
+                    <RelativeLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/chxc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/messageTVxwww"
+                        >
+
+                        <TextView
+                            android:id="@+id/namxc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Nunua hisa"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                        <ImageButton
+                            android:id="@+id/laswxc"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_forward_black_24dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="center"
+                            android:tint="@color/common_border_color"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/chat_view_separator"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/chgw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/nameTVwwwwx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ada"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nameTVwwww"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/nameTVwwwwx"
+                        android:text="Ada ulizo toa mpaka leo"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/messageTVwwww"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nameTVwwww"
+                        android:layout_marginLeft="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/messageTVxwwww"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/messageTVwwww"
+                        android:layout_marginLeft="10dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/nameTVwwwwz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/messageTVxwwww"
+                        android:text="Ada unayo daiwa mpaka leo"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/messageTVwwwwz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nameTVwwwwz"
+                        android:layout_marginLeft="10dp"
+                        android:text="Thamani yake : 16" />
+
+                    <TextView
+                        android:id="@+id/messageTVxwwwwz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/messageTVwwwwz"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ya mwezi  : Jan, Feb" />
+
+                    <RelativeLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/chx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/messageTVxwwwwz"
+                        >
+
+                        <TextView
+                            android:id="@+id/namx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Toa ada ya mwezi huu"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                        <ImageButton
+                            android:id="@+id/laswx"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ic_forward_black_24dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/chat_view_separator"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/chgwv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/nameTVwwwwxf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Mikopo"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nameTVwwwwf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/nameTVwwwwxf"
+                    android:text="Mikopo yako ilio pita"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/messageTVwwwwf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameTVwwwwf"
+                    android:layout_marginLeft="10dp"
+                    android:text="Idadi : 16" />
+
+                <TextView
+                    android:id="@+id/messageTVxwwwwf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/messageTVwwwwf"
+                    android:layout_marginLeft="10dp"
+                    android:text="Jumla yake : 16,000,000 /=" />
+
+                <TextView
+                    android:id="@+id/messageTVxwwwwff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/messageTVwwwwf"
+                    android:layout_marginLeft="10dp"
+                    android:text="Jumla yake : 16,000,000 /=" />
+
+                <TextView
+                    android:id="@+id/nameTVwwwwzf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/messageTVxwwwwff"
+                    android:text="Riba ulio lipia : 4,000,000 /="
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/nameTVwwwwzfxc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/nameTVwwwwzf"
+                    android:text="Siku ulizo chelewesha : 16"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/nameTVwwwwzfx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/nameTVwwwwzfxc"
+                    android:text="Deni la mikopo iliopita : 350,000 /="
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/chxxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/nameTVwwwwzfx"
+                    >
+
+                    <TextView
+                        android:id="@+id/namxvc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Ripoti kamili"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageButton
+                        android:id="@+id/laswxv"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_forward_black_24dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/nameTVwwwwfc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/chxxx"
+                    android:text="Mkopo unao endelea"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/messageTVwwwwzf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameTVwwwwfc"
+                    android:layout_marginLeft="10dp"
+                    android:text="Kiasi cha mkopo : 2,000,000 /=" />
+
+                <TextView
+                    android:id="@+id/messageTVwwwwzff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/messageTVwwwwzf"
+                    android:layout_marginLeft="10dp"
+                    android:text="Muda wa mkopo : Miezi 3" />
+
+                <TextView
+                    android:id="@+id/messageTVwwwwzfft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/messageTVwwwwzff"
+                    android:layout_marginLeft="10dp"
+                    android:text="Riba : 10% au 210,000 /= kwa mwezi" />
+
+                <TextView
+                    android:id="@+id/messageTVxwwwwzf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/messageTVwwwwzfft"
+                    android:layout_marginLeft="10dp"
+                    android:text="Kiasi cha rejesho : 410,000 /=" />
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/chxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/messageTVxwwwwzf"
+                    >
+
+                    <TextView
+                        android:id="@+id/namxv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="lipa rejesho"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageButton
+                        android:id="@+id/laswxx"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_forward_black_24dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/chxx2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/chxx"
+                    >
+
+                    <TextView
+                        android:id="@+id/namxv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Omba Mkopo"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageButton
+                        android:id="@+id/laswxx2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_forward_black_24dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/chat_view_separator"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/namf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Michango"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/namv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Michango iliyopita, ulio changia : 22"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@id/namf"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/namvc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Michango iliyopita, hauku changia : 4"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@id/namv"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/namvct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Michango inayoendelea ulio changia : 2"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@id/namvc"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/namvctz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Michango inayoendelea ambayo bado hujachangia : 3"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@id/namvct"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/ooo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/namvctz"
+                    android:orientation="vertical" >
+                    <ListView
+                        android:id="@+id/michangolistview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="#000000"
+                        android:dividerHeight=".5dp"
+                        android:paddingLeft="1dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/chxcb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/ooo"
+                    >
+
+                    <TextView
+                        android:id="@+id/namxcg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Omba Mchango"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageButton
+                        android:id="@+id/laswxcb"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_forward_black_24dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+</LinearLayout>

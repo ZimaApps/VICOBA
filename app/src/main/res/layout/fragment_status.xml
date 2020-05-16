@@ -1,0 +1,256 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_horizontal_margin"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+    tools:context=".ChatFragment"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/colorPrimary"
+      android:orientation="vertical">
+
+
+
+    <TextView
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Je, kikoba hichi kinatoa mikopo kwa wajumbe?"/>
+    <RadioGroup
+        android:id="@+id/mikopoyesno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/mikopondio"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+      <RadioButton
+          android:id="@+id/mikopondio"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Ndio"/>
+
+      <RadioButton
+          android:id="@+id/mikopohapana"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Hapana"/>
+
+    </RadioGroup>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/otherdetails"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <TextView
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Je, riba ya mkopo ni asilimia ngapi kwa mwezi?"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:gravity="center_vertical"
+        android:weightSum="3">
+
+      <EditText
+          android:id="@+id/ribaasilimia"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:inputType="number"
+          android:hint="10"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ProgressBar
+                android:id="@+id/ribaloading"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                />
+            <ImageView
+                android:id="@+id/ribaok"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_done_black_24dp"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:id="@+id/ribaerror"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_error_outline_black_24dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marejesho ya mkopo, yana fanyika.."/>
+    <RadioGroup
+        android:id="@+id/radiosfvg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/kilasiku"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+      <RadioButton
+          android:id="@+id/kilasiku"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Kila siku"/>
+
+      <RadioButton
+          android:id="@+id/kilawiki"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Kila Wiki"/>
+
+      <RadioButton
+          android:id="@+id/kilamwezi"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Kila mwezi"/>
+
+    </RadioGroup>
+
+
+
+
+    <TextView
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Endapo mjumbe atachelewesha rejesho, kuna faini yeyote atalipishwa?"/>
+    <RadioGroup
+        android:id="@+id/radiosfvgff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/chelewafainindio"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+      <RadioButton
+          android:id="@+id/chelewafainindio"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Ndio"/>
+
+      <RadioButton
+          android:id="@+id/chelewafainihapana"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Hapana"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/fainikiasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:weightSum="5">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:text="Shilingi ngapi kwa kila siku moja anayochelewesha?"/>
+      <EditText
+          android:id="@+id/fainikiasiamount"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:inputType="number"
+          android:hint="5,000"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ProgressBar
+                android:id="@+id/fainiyamikopoloading"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                />
+            <ImageView
+                android:id="@+id/fainiyamikopook"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_done_black_24dp"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:id="@+id/fainiyamikopoerror"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_error_outline_black_24dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

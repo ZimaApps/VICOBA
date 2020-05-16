@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/verifyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Kuhakiki na kusajili namba yako"
+        android:textSize="18dp"
+        android:textColor="#118C7E"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        />
+    
+    <TextView
+        android:id="@+id/smsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/verifyTV"
+        android:text="Tafadhali andika namba yako ya simu hapa chini, VICOBA App itakutumia namba ya siri kwenye namba hiyo. "
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/phoneRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smsTV"
+        android:layout_centerHorizontal="true">
+
+    <EditText
+        android:id="@+id/countryCodeET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+255"/>
+
+    <EditText
+        android:id="@+id/phoneNumberET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/countryCodeET"
+        android:hint="0754244567"
+        android:inputType="phone"
+        />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/phoneRLz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneRL"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/phonecodex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Namba ya siri"/>
+
+        <EditText
+            android:id="@+id/phoneNumberETx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/phonecodex"
+            android:hint="223145"
+            android:inputType="phone"
+            />
+
+    </RelativeLayout>
+
+    <Button
+
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hakiki namba"
+        android:layout_above="@+id/carrierChargesTV"
+        android:background="@drawable/btn_green_round_corners"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/nextBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Twende"
+        android:layout_above="@+id/carrierChargesTV"
+        android:background="@drawable/btn_green_round_corners"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:id="@+id/carrierChargesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrier SMS charges may apply"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,465 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_horizontal_margin"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+    tools:context=".ChatFragment"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+
+  <LinearLayout
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:clickable="true"
+      tools:context=".ChatFragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/colorPrimary"
+      android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/testt"
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Je, kikoba hichi kina kiingilio?"/>
+    <RadioGroup
+        android:id="@+id/radiosff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/kiingiliondio"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+
+        >
+
+      <RadioButton
+          android:id="@+id/kiingiliondio"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Ndio"/>
+
+      <RadioButton
+          android:id="@+id/kiingiliohapana"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Hapana"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/kiingiliodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:gravity="center_vertical"
+        android:weightSum="5">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:text="Shilingi ngapi?"/>
+      <EditText
+          android:id="@+id/kiingilio"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:inputType="numberDecimal"
+          android:hint="20,000"/>
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+         >
+        <ProgressBar
+            android:id="@+id/kiingilioloading"
+            android:visibility="gone"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            />
+        <ImageView
+            android:id="@+id/kiingiliook"
+            android:visibility="gone"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            app:srcCompat="@drawable/ic_done_black_24dp"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:id="@+id/kiingilioerror"
+            android:visibility="gone"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            app:srcCompat="@drawable/ic_error_outline_black_24dp"
+            android:layout_centerInParent="true"/>
+      </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+      <TextView
+          style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+          android:textSize="14sp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:text="Je, kikoba hichi kina ada ya kila mwezi?"/>
+      <RadioGroup
+          android:id="@+id/radiosf"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:checkedButton="@+id/adandio"
+          android:orientation="horizontal"
+          android:layout_marginTop="8dp"
+          tools:context=".ChatFragment"
+          >
+
+          <RadioButton
+              android:id="@+id/adandio"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Ndio"/>
+
+          <RadioButton
+              android:id="@+id/adahapana"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Hapana"/>
+
+      </RadioGroup>
+
+      <LinearLayout
+          android:id="@+id/adadata"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="-8dp"
+          android:gravity="center_vertical"
+          android:weightSum="5">
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="2"
+              android:text="Shilingi ngapi kwa mwezi?"/>
+          <EditText
+              android:id="@+id/ada"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="2"
+              android:inputType="numberDecimal"
+              android:hint="20,000"/>
+
+          <RelativeLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              >
+              <ProgressBar
+                  android:id="@+id/adaloading"
+                  android:visibility="gone"
+                  android:layout_width="22dp"
+                  android:layout_height="22dp"
+                  android:layout_centerInParent="true"
+                  />
+              <ImageView
+                  android:id="@+id/adaok"
+                  android:visibility="gone"
+                  android:layout_width="22dp"
+                  android:layout_height="22dp"
+                  app:srcCompat="@drawable/ic_done_black_24dp"
+                  android:layout_centerInParent="true"/>
+              <ImageView
+                  android:id="@+id/adaerror"
+                  android:visibility="gone"
+                  android:layout_width="22dp"
+                  android:layout_height="22dp"
+                  app:srcCompat="@drawable/ic_error_outline_black_24dp"
+                  android:layout_centerInParent="true"/>
+          </RelativeLayout>
+
+
+      </LinearLayout>
+
+
+
+
+
+
+
+    <TextView
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Je, kikoba hichi kina uza hisa?"/>
+    <RadioGroup
+        android:id="@+id/radiosfv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/hisandio"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+      <RadioButton
+          android:id="@+id/hisandio"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Ndio"/>
+
+      <RadioButton
+          android:id="@+id/hisahapana"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Hapana"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/hisadata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:gravity="center_vertical"
+        android:weightSum="5">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:text="Shilingi ngapi hisa moja?"/>
+      <EditText
+          android:id="@+id/hisa"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:inputType="numberDecimal"
+          android:hint="1,000"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ProgressBar
+                android:id="@+id/hisaloading"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                />
+            <ImageView
+                android:id="@+id/hisaok"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_done_black_24dp"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:id="@+id/hisaerror"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_error_outline_black_24dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <TextView
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Je, kikoba hichi kina faini za uvunjaji wa katiba?"/>
+    <RadioGroup
+        android:id="@+id/radiosfvg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/fainindio"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+      <RadioButton
+          android:id="@+id/fainindio"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Ndio"/>
+
+      <RadioButton
+          android:id="@+id/fainihapana"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Hapana"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/fainidata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:gravity="center_vertical"
+        android:weightSum="5">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:text="Shilingi ngapi?"/>
+      <EditText
+          android:id="@+id/faini"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:inputType="numberDecimal"
+          android:hint="5,000"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ProgressBar
+                android:id="@+id/fainiloading"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                />
+            <ImageView
+                android:id="@+id/fainiok"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_done_black_24dp"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:id="@+id/fainierror"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_error_outline_black_24dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <TextView
+        style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Je, kuna kiwango cha chini cha mfuko ambacho hakitakiwi kutoka?"/>
+    <RadioGroup
+        android:id="@+id/radiosfvgf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/chinindio"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        >
+
+      <RadioButton
+          android:id="@+id/chinindio"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Ndio"/>
+
+      <RadioButton
+          android:id="@+id/chinihapana"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Hapana"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/chinidata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:gravity="center_vertical"
+        android:weightSum="5">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:text="Shilingi ngapi?"/>
+      <EditText
+          android:id="@+id/chini"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:inputType="numberDecimal"
+          android:hint="500,000"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <ProgressBar
+                android:id="@+id/chiniloading"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                />
+            <ImageView
+                android:id="@+id/chiniok"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_done_black_24dp"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:id="@+id/chinierror"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                app:srcCompat="@drawable/ic_error_outline_black_24dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+
+</ScrollView>
+
